@@ -9,5 +9,6 @@
 1. Press the extensions button in firefox
 2. Right click on the Media Quick Downloader and pin to toolbar
 3. Open an udio link and play the music
-4. Press the button and use either the link or download button to download the media
+4. Press the download button to download the song
+
 
