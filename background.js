@@ -29,7 +29,7 @@ function cleanUrl(url) {
 
 function isMediaByExtension(url) {
   const base = cleanUrl(url);
-  return /\.(mp4|webm|mp3|wav|ogg|m3u8|ts)$/i.test(base);
+  return /\.(mp4|mp3|wav)$/i.test(base);
 }
 
 function isMediaByMime(ct) {
@@ -86,3 +86,4 @@ browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
     });
   }
 });
+
