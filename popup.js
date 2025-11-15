@@ -12,15 +12,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     const div = document.createElement('div');
     div.className = 'item';
 
+    const filename = (new URL(url)).pathname.split('/').pop() || url;
+
     const a = document.createElement('a');
     a.href = url;
-    a.textContent = url;
+    a.textContent = filename;
     a.target = '_blank';
 
     const btn = document.createElement('button');
     btn.textContent = 'Download';
     btn.onclick = () => {
-      const filename = (new URL(url)).pathname.split('/').pop() || 'media';
       browser.runtime.sendMessage({ type: 'DOWNLOAD_URL', url, filename });
     };
 
@@ -29,4 +30,5 @@ document.addEventListener('DOMContentLoaded', async () => {
     div.appendChild(btn);
     container.appendChild(div);
   });
+
 });
